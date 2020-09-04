@@ -1,40 +1,49 @@
-
-
-function updateText() {
-    let input = document.getElementById('text-input').value
-    document.getElementById('text-output').innerText = input
+updateText = () => {
+    let input = document.getElementById('text-input').button;
+    document.getElementById('text-output').innerText = input;
 }
 
-function makeBold(elem) {
+makeBold = (elem) => {
     elem.classList.toggle("active");
     document.getElementById('text-output').classList.toggle('bold');
 }
 
-function makeItalic(elem) {
+makeItalic = (elem) => {
     elem.classList.toggle("active");
     document.getElementById('text-output').classList.toggle('italic');
 }
 
 // using contains, add and remove functions
-function addUnderline(elem) {
-    let formattedText = document.getElementById('text-output')
-    if (elem.classList.contains("active")) {
-        formattedText.classList.remove('underline');  
-    } else {
-        formattedText.classList.add('underline');
-    }
+addUnderline = (elem) => {
+    let formattedTextList = document.getElementById('text-output').classList
+    // if (elem.classList.contains("active")) {
+    //     formattedTextList.remove('underline');  
+    // } else {
+    //     formattedTextList.add('underline');
+    // }
+
+    elem.classList.contains("active") ? formattedTextList.remove('underline') : formattedTextList.add('underline');
 
     elem.classList.toggle("active");
-    // document.getElementById('text-output').classList.toggle('underline');
+    // formattedTextList.toggle('underline');
 }
 
-function alignText(elem, alignType) {
-    let list = document.getElementsByClassName('align');
-    for (var i = 0; i < list.length; i++) {
-        if (list[i].classList.contains("active")) {
-            list[i].classList.remove("active");
+alignText = (elem, alignType) => {
+    let alignButtons = document.getElementsByClassName('align');
+    // for (var i = 0; i < alignButtons.length; i++) {
+    //     if (alignButtons[i].classList.contains("active")) {
+    //         alignButtons[i].classList.remove("active");
+    //     }
+    // }
+    console.log(alignButtons)
+
+    for (let button of alignButtons) {
+        if (button.classList.contains("active")) {
+            button.classList.remove("active");
         }
-    }
+    };
+    // map() or foreach loop doesn't work: alignButtons is a collection, not an array
+
     elem.classList.add("active");
     document.getElementById('text-output').style.textAlign = alignType;
 }
