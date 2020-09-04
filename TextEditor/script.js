@@ -17,12 +17,15 @@ function makeItalic(elem) {
 
 // using contains, add and remove functions
 function addUnderline(elem) {
-    elem.classList.toggle("active");
-    if (elem.classList.contains("underline")) {
-        document.getElementById('text-output').classList.remove('underline');
+    let formattedText = document.getElementById('text-output')
+    if (elem.classList.contains("active")) {
+        formattedText.classList.remove('underline');  
     } else {
-        document.getElementById('text-output').classList.add('underline');
+        formattedText.classList.add('underline');
     }
+
+    elem.classList.toggle("active");
+    // document.getElementById('text-output').classList.toggle('underline');
 }
 
 function alignText(elem, alignType) {
