@@ -140,6 +140,16 @@ header::before {
     box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
+.navigation a {
+    border: 2px solid #004186;
+    width: 60px;
+    padding: 5px 8px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #004186;
+}
+
 .nav-button.new-post-button:hover {
     /* position: fixed; */
     bottom: 30px;
