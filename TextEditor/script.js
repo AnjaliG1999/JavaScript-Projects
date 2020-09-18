@@ -1,5 +1,5 @@
 updateText = () => {
-    let input = document.getElementById('text-input').button;
+    let input = document.getElementById('text-input').value;
     document.getElementById('text-output').innerText = input;
 }
 
