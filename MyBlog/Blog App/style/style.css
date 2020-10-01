@@ -9,17 +9,20 @@ body {
 
 header {
     height: 350px;
-    background-color: blue;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-image: url('../assets/banner.jpeg');
+    align-items: center;   
     background-size: cover;
     background-position: center;
     position: relative;
 }
+
+.home-page header {
+    background-image: url('../assets/banner.jpeg');
+}
+
 header > * {
     z-index: 10;
 }
@@ -122,6 +125,9 @@ header::before {
     overflow: hidden;
     max-height: 65px;
     line-height: 1.4;
+}
+a.post-link {
+    text-decoration: none;
 }
 
 .nav-button.new-post-button {
