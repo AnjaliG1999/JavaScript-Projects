@@ -110,7 +110,7 @@ header::before {
 
 .post-image {
     flex-basis: 40%;
-    background-image: url('../assets/unsplash.jpg');
+    /* background-image: url('../assets/unsplash.jpg'); */
     /* width: 100%; */
     background-size: cover;
     background-position: center;

@@ -1,4 +1,4 @@
-const PATH = "../data.json"
+const PATH = "./data.json"
 const fs = require('fs');
 
 class Post {

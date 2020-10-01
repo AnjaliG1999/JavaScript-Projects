@@ -1,7 +1,16 @@
 const express = require('express');
 const app = express();
-const Post = require("../api/models/posts");
+const Post = require("./api/models/posts");
 const postsData = new Post();
+
+// middleware to allow data access (CORS)
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", '*');
+    next();
+});
+
+// make uploads a static folder so that the images can be used publically
+app.use('/uploads', express.static('uploads'));
 
 app.get("/api/posts", (req, res) => {
 
