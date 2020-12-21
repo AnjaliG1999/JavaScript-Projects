@@ -1,10 +1,20 @@
 const URL = "http://localhost:3000/tweets";
 
+
 /**
  * Retrive Twitter Data from API
  */
 const getTwitterData = () => {
+    const q = 'coding';
+    const count = 10;
+    // const staticUrl = `${URL}?q=${q}&count=${count}`;
+    const url = 'http://localhost:3000/tweets?q=coding&count=10';
 
+    fetch(url).then((res) => {
+        return res.json();
+    }).then((data) => {
+        console.log(data);
+    })
 }
 
 /**
