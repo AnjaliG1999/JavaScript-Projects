@@ -1,19 +1,23 @@
 const URL = "http://localhost:3000/tweets";
 
+const onEnter = (e) => {
+    if(e.key == 'Enter'){
+        getTwitterData();
+    }
+}
 
 /**
  * Retrive Twitter Data from API
  */
 const getTwitterData = () => {
-    const q = 'coding';
-    const count = 10;
-    // const staticUrl = `${URL}?q=${q}&count=${count}`;
-    const url = 'http://localhost:3000/tweets?q=coding&count=10';
+    const q = document.getElementById('user-search-input').value;
+    if(!q) return
 
+    const url = `${URL}?q=${encodeURIComponent(q)}&count=10`;
     fetch(url).then((res) => {
         return res.json();
     }).then((data) => {
-        console.log(data);
+        buildTweets(data.statuses);
     })
 }
 
@@ -39,7 +43,38 @@ const nextPageButtonVisibility = (metadata) => {
  * Build Tweets HTML based on Data from API
  */
 const buildTweets = (tweets, nextPage) => {
+    // console.log(tweets);
+    let tweetContent = '';
+    
+    tweets.map((tweet) => {
+        // console.log(tweet.full_text)
 
+        tweetContent += `<div class="tweet-container">
+                        <div class="tweet-user-info">
+                            <div class="tweet-user-profile"></div>
+                            <div class="tweet-user-name-container">
+                                <div class="tweet-user-fullname">
+                                    Anjali Goyal
+                                </div>
+                                <div class="tweet-user-username">
+                                    @anjali
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tweet-images-container">
+                            <div class="tweet-image"></div>
+                        </div>
+                        <div class="tweet-text-container">
+                            ${tweet.full_text}
+                        </div>
+                        <div class="tweet-date-container">
+                            20 hours ago
+                        </div>
+                    </div>`
+    });
+
+    // console.log(tweetContent)
+    document.querySelector('.tweets-list').innerHTML = tweetContent;
 }
 
 /**

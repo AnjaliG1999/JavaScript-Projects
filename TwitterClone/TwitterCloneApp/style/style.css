@@ -69,8 +69,7 @@ body {
 }
 
 .tweets-search-container {
-    margin: 20px;
-    margin-top: 30px;
+    margin: 30px 20px 0 20px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #979797;
@@ -89,6 +88,7 @@ body {
     font-size: 30px;
     color: white;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 #user-search-input:focus{
@@ -96,8 +96,8 @@ body {
 }
 
 .tweets-list {
-    height: 500px;
     margin: 20px;
+    margin-top: 0;
 }
 
 .tweets-sidebar-container {

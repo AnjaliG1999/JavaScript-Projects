@@ -15,7 +15,7 @@ app.get('/tweets', (req, res) => {
     console.log(req.query)
     const query = req.query.q;
     const count = req.query.count;
-    console.log(process.env.TWITTER_API_TOKEN);
+    // console.log(process.env.TWITTER_API_TOKEN);
     
     twitter.get(query, count).then((response) => {
         res.status(200).send(response.data);

@@ -29,32 +29,10 @@
             </div>
             <div class="main">
                 <div class="tweets-search-container">
-                    <input type="text" placeholder="Search Twitter" id="user-search-input">
-                    <i class="fas fa-search fa-flip-horizontal"></i>
+                    <input type="text" placeholder="Search Twitter" id="user-search-input" onkeyup="onEnter(event)">
+                    <i class="fas fa-search fa-flip-horizontal" onclick="getTwitterData()"></i>
                 </div>
                 <div class="tweets-list">
-                    <div class="tweet-container">
-                        <div class="tweet-user-info">
-                            <div class="tweet-user-profile"></div>
-                            <div class="tweet-user-name-container">
-                                <div class="tweet-user-fullname">
-                                    Anjali Goyal
-                                </div>
-                                <div class="tweet-user-username">
-                                    @anjali
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tweet-images-container">
-                            <div class="tweet-image"></div>
-                        </div>
-                        <div class="tweet-text-container">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nisi tellus, vehicula ac facilisis vel, bibendum eu sem. Aliquam consequat vel nulla sit amet commodo.
-                        </div>
-                        <div class="tweet-date-container">
-                            20 hours ago
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="tweets-sidebar-container">
