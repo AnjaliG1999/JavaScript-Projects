@@ -143,3 +143,19 @@ body {
     cursor: pointer;
 }
 
+.next-page-container {
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 0;
+    border: 1px solid #1C1C1C;
+    height: 30px;
+    text-align: center;
+    padding: 6px;
+    color: #47525D;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.next-page-container:hover {
+    background-color:#1C1C1C;
+}

@@ -34,56 +34,10 @@
                     <i class="fas fa-search fa-flip-horizontal" onclick="getTwitterData()"></i>
                 </div>
                 <div class="tweets-list">
-                    <div class="tweet-container">
-                        <div class="tweet-user-info">
-                            <div class="tweet-user-profile"></div>
-                            <div class="tweet-user-name-container">
-                                <div class="tweet-user-fullname">
-                                    Anjali Goyal
-                                </div>
-                                <div class="tweet-user-username">
-                                    @anjali
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tweet-images-container">
-                            <div class="tweet-image"></div>
-                        </div>
-                        <div class="tweet-text-container">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nisi tellus, vehicula ac facilisis vel, bibendum eu sem. Aliquam consequat vel nulla sit amet commodo.
-                        </div>
-                        <div class="tweet-date-container">
-                            20 hours ago
-                        </div>
-                    </div>
-
-                    <div class="tweet-container">
-                        <div class="tweet-user-info">
-                            <div class="tweet-user-profile"></div>
-                            <div class="tweet-user-name-container">
-                                <div class="tweet-user-fullname">
-                                    Anjali Goyal
-                                </div>
-                                <div class="tweet-user-username">
-                                    @anjali
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tweet-video-container">
-                            <video controls>
-                                <source src="" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="tweet-images-container">
-                            <div class="tweet-image"></div>
-                        </div> -->
-                        <div class="tweet-text-container">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nisi tellus, vehicula ac facilisis vel, bibendum eu sem. Aliquam consequat vel nulla sit amet commodo.
-                        </div>
-                        <div class="tweet-date-container">
-                            20 hours ago
-                        </div>
-                    </div>
+                    
+                </div>
+                <div class="next-page-container">
+                    <i class="fas fa-arrow-down"></i>
                 </div>
             </div>
             <div class="tweets-sidebar-container">
@@ -91,9 +45,9 @@
                     <div class="tweets-trending">
                         <h5>Trends for you</h5>
                         <ul>
-                            <li>#Coding</li>
-                            <li>#JavaScript</li>
-                            <li>#Python</li>
+                            <li onclick="selectTrend(this)">#Coding</li>
+                            <li onclick="selectTrend(this)">#JavaScript</li>
+                            <li onclick="selectTrend(this)">#Python</li>
                         </ul>
                     </div>
                 </div>
