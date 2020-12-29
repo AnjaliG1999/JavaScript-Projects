@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/tweets', (req, res) => {
-    console.log(req.query)
+    // console.log(req.query)
     const query = req.query.q;
     const count = req.query.count;
     // console.log(process.env.TWITTER_API_TOKEN);
