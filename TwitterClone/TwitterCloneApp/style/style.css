@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #0F0F11;
 }
 
 .container {
@@ -21,6 +22,10 @@ body {
 .navigation {
     color: #FFFFFF;
     margin-top: 30px;
+    position: fixed;
+    width: 20%;
+    min-width: 70px;
+    max-width: 100px;
 }
 
 .logo {
@@ -58,7 +63,9 @@ body {
     height: 30px;
     border: 1px solid #979797;
     border-radius: 50%;
-    /* background-image: url(./assets/user-image.jpg); */
+    background-image: url(../assets/DSC_8718.jpg);
+    background-position: center;
+    background-size: cover;
     background-color: white;
 }
 
@@ -112,10 +119,11 @@ body {
     border-radius: 40px;
     background-color: white;
     overflow: hidden;
+    position: fixed;
 }
 
 .tweets-trending {
-    height: 200px;
+    height: 250px;
     background: #F2F2F2;
     border-radius: 40px;
     margin: 10px;
@@ -138,9 +146,10 @@ body {
     color: #A5A5A6;
 }
 .tweets-trending ul li {
-    border-top: 1px solid#D8D8D8;
+    border-top: 0.5px solid#D8D8D8;
     padding: 8px 0 8px 20px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .next-page-container {
@@ -154,6 +163,7 @@ body {
     color: #47525D;
     cursor: pointer;
     transition: all 0.15s ease-in-out;
+    visibility: hidden;
 }
 
 .next-page-container:hover {
